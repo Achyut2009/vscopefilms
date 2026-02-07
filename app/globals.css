@@ -82,12 +82,10 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Remove dark mode overrides — force single light/fiery theme */
-
-/* Fiery gradient background for the whole site */
+/* Single light theme with flickering grid background */
 body {
-  background: linear-gradient(135deg, #ff5f6d 0%, #ff9966 45%, #ffd86b 100%);
-  color: #0f172a; /* neutral dark text */
+  background: #fafafa;
+  color: #0f172a;
 }
 
 @layer base {

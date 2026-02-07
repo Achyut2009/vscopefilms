@@ -1,14 +1,21 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
 // Countdown removed to avoid hydration mismatches — static coming soon page
 
 export default function Home() {
-
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-6">
-      <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden ring-1 ring-black/5">
+    <div className="relative min-h-screen flex items-center justify-center py-12 px-6 overflow-hidden">
+      <FlickeringGrid
+        className="absolute inset-0 z-0 w-full h-full"
+        squareSize={4}
+        gridGap={6}
+        color="#ff6b35"
+        maxOpacity={0.3}
+        flickerChance={0.05}
+      />
+      <div className="relative z-10 w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden ring-1 ring-black/5">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="relative bg-gray-100">
               <Image
